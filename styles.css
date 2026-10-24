@@ -4,90 +4,88 @@
 }
 
 body {
+  text-align: center;
+  background-color: #283149;
   margin: 0;
   min-height: 100vh;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background: #283149;
-  color: #DBEDF3;
+  padding: 35px 15px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-  margin: 40px 10px 10px;
-  font: bold 4rem Georgia, serif;
-  text-shadow: 3px 3px #DA0463;
-}
-
-.subtitle {
+  font-size: 5rem;
   color: #DBEDF3;
-  margin: 15px;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+  margin: 15px 0 0;
 }
 
 .set {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin: 100px auto 0;
-  padding: 15px;
-  max-width: 1100px;
+  gap: 15px;
+  margin: auto 0;
+  padding: 35px 0;
 }
 
 .drum {
-  width: 130px;
-  height: 145px;
-  border: 7px solid #404B69;
-  border-radius: 18px;
-  background: linear-gradient(145deg, #fff, #c9d5e8);
-  box-shadow: 0 6px 0 #171c2c;
+  outline: none;
+  border: 12px solid #404B69;
+  border-radius: 15px;
+  width: 187px;
+  height: 187px;
+  flex: 0 1 187px;
+  font-size: 5rem;
+  font-family: "Arvo", cursive;
+  font-weight: 900;
   color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  text-align: center;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  transition: transform 0.08s, box-shadow 0.08s;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.drum span {
-  font-size: 3.5rem;
-}
+.w { background-image: url("tom1.png"); }
+.a { background-image: url("tom2.png"); }
+.s { background-image: url("tom3.png"); }
+.d { background-image: url("tom4.png"); }
+.j { background-image: url("snare.png"); }
+.k { background-image: url("crash.png"); }
+.l { background-image: url("kick.png"); }
 
-.drum b {
-  font-size: 1.4rem;
-}
-
-.drum:active,
-.drum.pressed {
-  transform: translateY(5px) scale(0.94);
-  box-shadow: 0 1px 0 #171c2c, 0 0 18px #DBEDF3;
-  border-color: #DA0463;
-  opacity: 0.75;
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.6;
+  transform: scale(0.95);
 }
 
 footer {
-  margin-top: 100px;
-  padding: 25px;
+  color: #DBEDF3;
+  font-family: sans-serif;
+  margin-top: auto;
+  padding: 15px 0 0;
 }
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 3rem;
-  }
-
-  .set {
-    margin-top: 45px;
-    gap: 12px;
+    font-size: 2.7rem;
   }
 
   .drum {
-    width: 100px;
-    height: 110px;
+    width: 125px;
+    height: 125px;
+    flex-basis: 125px;
+    font-size: 3.5rem;
+    border-width: 8px;
   }
 
-  .drum span {
-    font-size: 2.5rem;
+  .set {
+    gap: 10px;
   }
 }
